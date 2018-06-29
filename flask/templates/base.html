@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <!-- Bootstrap core CSS -->
+    <link href="../static/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="../static/css/clean-blog.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      
+
+    <style>
+    .head{
+        background-color: black;
+        color: white;
+        padding: 10px;
+        font-size:50px;
+        text-align: center;    
+    }
+    .head2{
+        font-size:30px;
+        text-align: center;  
+    }
+    .flex-container {
+        /*  */
+        display: -webkit-flex;
+        display: flex;
+        -webkit-flex-flow: row wrap;
+        flex-flow: row-reverse wrap;
+        text-align: center;
+    }
+    .flex-container > * {
+        padding: 15px;
+        -webkit-flex: 1 100%;
+        flex: 1 100%;
+    }
+    .article {
+        text-align: center;
+        padding: 15px;
+        margin-left: 400px;
+        margin-top: 768px;
+    }
+    header {background: black;color:white;}
+    footer {background: #aaa;color:white;}
+    .nav {background:#eee;}
+    .nav ul {
+        list-style-type: none;
+        font-size:24px;
+        padding: 0;
+    }
+    .nav ul a {
+     text-decoration: none;
+    }
+    @media all and (min-width: 768px) {
+        .nav {text-align:left;-webkit-flex: 1 auto;flex:1 auto;-webkit-order:1;order:1;}
+        .article {-webkit-flex:5 0px;flex:5 0px;-webkit-order:2;order:2;}
+        footer {-webkit-order:3;order:3;}
+    }
+    </style>
+      
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="http://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+        
+  </head>
+
+  <body>
+
+    <h2 class="head">tweeTrend</h2>
+
+      <div class="starter-template">
+      
+      {% block body %}{% endblock %}
+      {% block minutes %}{% endblock %}
+      {% block hour %}{% endblock %}
+          
+      </div>
+        
+    </div><!-- /.container -->
+    
+
+    <!-- Footer -->
+    <footer>
+      <div class="flex-container">
+        <div class="row">
+          <div class="col-lg-8 col-md-10 mx-auto">
+            <ul class="list-inline text-center">
+              <li class="list-inline-item">
+                <a href="https://github.com/sgach">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-github fa-stack-1x fa-inverse" style="font-size:48px;color:black"></i>
+                  </span>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="https://www.linkedin.com/in/anqi-chen-sgach/">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-linkedin-square fa-stack-1x fa-inverse" style="font-size:48px;color:black"></i>
+                  </span>
+                </a>
+              </li>
+            </ul>
+            <p class="copyright text-muted">Copyright &copy; Insight Data Engineering Project 2018</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="../static/js/bootstrap.min.js"></script>
+  </body>
+</html>
+
+
