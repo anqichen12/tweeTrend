@@ -8,7 +8,7 @@ tweeTrend is a data pipeline to monitor and analyze artist trend in streaming tw
 Twitter plays a significant role and has been a crucial social network tool nowadays. Some insights could be obtained from tweets. The project is going to investigate artist trend in tweets. Sometimes artist trend could be inconsistant between twitter and spotify. Twitter indicates a general trend of artist covering larger fields such as in movie, news, or fashion, while music websites like spotify, iTunes limits the field to only music. Taking Rihanna for example, her movie Ocean's 8 was released in June. By comparing the trend in twitter and spotify, it is found there is a huge increase in tweets mentioning Rihanna, while the follower count of Rihanna in spotify keeps nearly the same. Will the trend of artists in twitter have impact on music website? The project could be also applied to investigate the impact of artists in twitter on album sells, products that artists advertised, and even movies that artists take part in. 
 
 # tweeTrend workflow
- # The data pipeline is as shown below:
+## The data pipeline is as shown below:
 ![pipeline](/data/data-pipeline.png?raw=true "pipeline")
 
 ## Data Source
