@@ -15,8 +15,6 @@ Twitter plays a significant role and has been a crucial social network tool nowa
 
 There are two types of data source. One is historical data (100GB), which is pulled from data stored in AWS S3 bucket. The historical data is used to increase kafka producer throughput, since there is a limit in twitter API usage. Another one is real-time data, which is pulled from twitter API and spotify API. The list of artists is limited to 200 popular artists which is referred from Billboard and Spotify.  
 
-![Raw Twitter File](Figures/twitter.png)
-
 
 ## Data Ingestion
 
