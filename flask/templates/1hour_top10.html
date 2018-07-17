@@ -1,0 +1,85 @@
+   
+{% extends "base.html" %}
+{% block minutes %}
+<!DOCTYPE html><html lang="en">
+<style>
+    .head2{
+        padding: 10px;
+        font-size:20px;
+        text-align: center;
+    }
+    .chart{
+        position: center;
+        margin-left: 400px;
+        margin-top: 768px;
+        height: 500px;
+        width:  1000px;
+    }
+</style>
+<head>   <meta charset="utf-8" />      <!-- import plugin script -->   <script src='static/js/Chart.min.js'></script>   </head>
+<body>
+<div class="container text-center">
+<p>1hour<p>
+<div class="row">
+<div class="col-lg-6 col-md-7 col-sm-6">
+  <!-- bar chart canvas element -->
+<canvas id="chart" width="400" height="500"></canvas>
+<script class="chart">
+   // bar chart data
+   var barData = {
+   labels : [{% for val in c %}
+                  "{{val.name}}",
+              {% endfor %}],
+   datasets : [
+      {
+            fillColor: "rgba(151,187,205,0.2)",
+            strokeColor: "rgba(151,187,205,1)",
+            pointColor: "rgba(151,187,205,1)",
+         data : [{% for val in c %}
+                      {{val.count}},
+                    {% endfor %}]
+      }
+      ]
+   }
+   // get bar chart canvas
+   var mychart = document.getElementById("chart").getContext("2d");
+   
+   steps = 10
+   max = 600000
+   // draw bar chart
+   new Chart(mychart).Bar(barData, {
+        scaleOverride: true,
+        scaleSteps: steps,
+        scaleStepWidth: Math.ceil(max / steps),
+        scaleStartValue: 0,
+        scaleShowVerticalLines: true,
+        scaleShowGridLines : true,
+        barShowStroke : true,
+        scaleShowLabels: true
+   });
+</script>
+<p>twitter count</p>
+</div>
+<div class="col-lg-6 col-md-7 col-sm-6">
+                   <table class="table">
+                     <thead>
+                       <tr>
+                         <th>name</th>
+                         <th>followers</th>
+                       </tr>
+                     </thead>
+                     <tbody>
+                       {% for val in f %}
+                       <tr>
+                         <td>{{val.name}}</td>
+                         <td>{{val.followers}}</td>
+                       </tr>
+                       {% endfor %}
+                     </tbody>
+                   </table>
+                   <p>spotify followers</p>
+               </div>
+</div>
+</div>
+</body></html>
+{% endblock %}
