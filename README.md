@@ -107,6 +107,10 @@ port 8050 main page:
 
 The page shows a dynamic graph of real-time tweet count for a chosen artist every second.
 
+## Presentation
+
+link: https://docs.google.com/presentation/d/1T75-38hXYqOlROIFoXJ2NWAUE4hcYOAnAvwDeRugjHc/edit?usp=sharing
+
 ## Demo
 
 webpage 1: https://youtu.be/OLhmtmiqtiU
